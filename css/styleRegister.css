@@ -1,0 +1,176 @@
+/* General styles for the body */
+
+
+body {
+    font-family: "Playwrite DE Grund", cursive;
+    line-height: 1.2;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0e0e0, #96989D); /* Subtle, neutral gradient */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main container for the registration form */
+.register-container {
+    display: flex;
+    flex-direction: row;
+    max-width: 1000px; /* Increased width for more space */
+    width: 100%;
+    height: 85%;
+    background-color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+/* Form section on the left */
+.form-section {
+    padding: 40px;
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fafafa;
+}
+
+/* Header styles */
+.form-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Input fields container */
+.input-field {
+    margin-bottom: 10px;
+    position: relative;
+}
+
+/* Input field labels */
+.input-field label {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 5px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Input field styles */
+.input-field input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 20px; /* Increased border-radius for rounder corners */
+    border: 2px solid #e0e0e0;
+    background-color: #fff;
+    font-size: 0.9rem;
+    color: #333;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-field input:focus {
+    border-color: #18475B;
+}
+
+/* Submit button styling */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background-color:#18475B; /* Softer purple */
+    color: white;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background-color: #AFB0B5;
+}
+
+/* Country and city fields side by side */
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px; /* Add space below the row */
+}
+
+.half-width {
+    flex: 0 0 45%; /* Reduced to 40% to make them smaller */
+    margin-right: 20px; /* Space between the fields */
+}
+
+/* Remove right margin from the last item */
+.half-width:last-child {
+    margin-right: 0; /* Remove right margin for the last input */
+}
+
+
+/* Image section on the right */
+.image-section {
+    flex: 2; /* Increase this to give more space to the image */
+    background-image: url('../images/peakpx.jpg'); /* Placeholder for the image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .register-container {
+        flex-direction: column;
+    }
+
+    .image-section {
+        height: 200px;
+    }
+
+    .form-section {
+        padding: 20px;
+    }
+
+    .form-section h2 {
+        font-size: 1.5rem;
+    }
+
+    input[type="submit"] {
+        font-size: 1rem;
+    }
+
+    /* Make the fields stack on smaller screens */
+    .row {
+        flex-direction: column;
+    }
+
+    .half-width {
+        flex: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px;
+    }
+}
+
+/* Add this CSS at the end of your existing styles */
+
+.login-link {
+    margin-top: 20px;
+    text-align: center; /* Center align the link */
+}
+
+.login-link p {
+    font-size: 0.9rem; /* Adjust font size */
+    color: #555; /* Text color */
+}
+
+.login-link a {
+    color: #18475B; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make the link bold */
+}
+
+.login-link a:hover {
+    text-decoration: underline; /* Add underline on hover */
+}

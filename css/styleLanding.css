@@ -1,0 +1,157 @@
+/* General styles for the body */
+body {
+    font-family: "Playwrite DE Grund", cursive;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0e0e0, #96989D); /* Subtle, neutral gradient */
+    height: 100%;
+}
+
+/* Main container for the landing page */
+.landing-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+/* Navigation Bar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #18475B; /* Dark background for the navbar */
+    color: white;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* Space between links */
+}
+
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-links li a:hover {
+    color: #AFB0B5; /* Lighter color on hover */
+}
+
+/* Image section */
+.image-section {
+    flex: 1; /* Full height for the image section */
+    background-image: url('../images/HD-wallpaper-flowers-branches-cosmetics-beauty-aesthetics.jpg'); /* Placeholder for the background image */
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    color: white; /* Text color for the overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Overlay for the image section */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+/* Main header styles */
+.image-section h1 {
+    font-size: 3rem;
+    text-align: center;
+    z-index: 1; /* Place the text above the overlay */
+}
+
+/* Content section */
+.content-section {
+    padding: 40px;
+    background-color: #fafafa; /* Light background for contrast */
+    text-align: center;
+}
+
+/* Header styles */
+.content-section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Paragraph styles */
+.content-section p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* Button styles */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px; /* Space between buttons */
+}
+
+.btn {
+    padding: 12px 20px;
+    border-radius: 25px;
+    border: none;
+    background-color: #18475B; /* Softer purple */
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #AFB0B5;
+}
+
+/* Section styles */
+.section {
+    padding: 40px;
+    background-color: #fff; /* White background for sections */
+    text-align: center;
+}
+
+.section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .image-section h1 {
+        font-size: 2.5rem; /* Smaller font size on mobile */
+    }
+
+    .content-section h2,
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .btn {
+        font-size: 0.9rem; /* Smaller button text on mobile */
+    }
+
+    .navbar-links {
+        flex-direction: column; /* Stack navbar links on mobile */
+    }
+
+    .navbar-links li {
+        margin-bottom: 10px; /* Space between stacked links */
+    }
+}
